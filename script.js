@@ -2,9 +2,9 @@ $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 200){
-            $('.navbar').addClass("sticky");
+            $('.navbarCustom').addClass("sticky");
         }else{
-            $('.navbar').removeClass("sticky");
+            $('.navbarCustom').removeClass("sticky");
         }
         
         // scroll-up button show/hide script
@@ -22,27 +22,27 @@ $(document).ready(function(){
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function(){
+    $('.navbarCustom .menu li a').click(function(){
         // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
 
     // toggle menu/navbar script
     $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
+        $('.navbarCustom .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: [ "Software Developer", "Web developer"],
+        strings: [ "Software Developer", "Web Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: [ "Software Developer", "Web Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -77,4 +77,39 @@ var year = age_dt.getUTCFullYear();
 var age = Math.abs(year - 1970);
 document.getElementById('myAge').innerHTML=age;
 
+
+function redirect() {
+    window.open("https://github.com/guthaVamshi/codeSmashers", "_blank");
+    modal.style.display = "none";
+  }
+  function redirect2() {
+    window.open("https://github.com/guthaVamshi/AMkart", "_blank");
+    modal2.style.display = "none";
+  }
+  var modal = document.getElementById("myModal");
+  var modal2 = document.getElementById("myModal2");
+  var nothanks = document.getElementById("nothanks");
+  var nothanks2 = document.getElementById("nothanks2");
+  var btn = document.getElementById("myBtn");
+  var btn2 = document.getElementById("myBtn2");
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  nothanks.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  };
+  btn2.onclick = function () {
+    modal2.style.display = "block";
+  };
+  nothanks2.onclick = function () {
+    modal2.style.display = "none";
+  };
 });

@@ -434,6 +434,7 @@ section .title::after{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    
 }
 .contact .contact-content .left p{
     text-align: justify;
@@ -460,8 +461,10 @@ section .title::after{
     color: #333;
 }
 .contact .contact-content .right a {
-   margin: 2rem;
+   margin: 1rem;
    padding: 1rem;
+   color: crimson;
+
 }
 .contact .contact-content .right {
    padding: 1rem;
@@ -557,7 +560,7 @@ footer span a:hover{
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
-        margin-bottom: 35px;
+      
     }
 }
 
@@ -607,6 +610,9 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    .cols{
+        flex-direction: column;
     }
 }
 
